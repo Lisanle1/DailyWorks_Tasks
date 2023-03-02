@@ -20,10 +20,10 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(formData.email === email && formData.password === password){
+    if(formData.email===email && formData.password===password){
       dispatch(loginUser(formData));
-      setFormData((formData.email = ""));
-      setFormData((formData.password = ""));
+      setFormData(formData.email = "");
+      setFormData(formData.password = "");
       navigate("/home");
     } 
     else{
