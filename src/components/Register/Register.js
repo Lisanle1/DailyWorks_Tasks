@@ -33,14 +33,22 @@ const Register = () => {
           <TextField
           type="text"
           name="name"
+          label="Name"
+          variant="standard"
           value={formData.name}
           onChange={handleInputChange}
         />
-          <TextField   type="email"
+          <TextField   
+          type="email"
           name="email"
+          label="Email"
+          variant="standard"
           value={formData.email}
           onChange={handleInputChange} />
-            <TextField   type="password"
+          <TextField   
+          type="password"
+          label="Password"
+          variant="standard"
           name="password"
           value={formData.password}
           onChange={handleInputChange} />

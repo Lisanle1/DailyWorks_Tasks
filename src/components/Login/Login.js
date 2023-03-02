@@ -48,12 +48,16 @@ const Login = () => {
             <TextField
               type="email"
               name="email"
+              label="Email"
+              variant="standard"
               value={formData.email}
               onChange={handleInputChange}
             />
             <TextField
               type="password"
               name="password"
+              label="Password"
+              variant="standard"
               value={formData.password}
               onChange={handleInputChange}
             />
