@@ -20,14 +20,17 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(formData.email===email && formData.password===password){
-      dispatch(loginUser(formData));
-      setFormData(formData.email = "");
-      setFormData(formData.password = "");
-      navigate("/home");
-    } 
-    else{
-      alert("Invalid email or password");
+    if (formData.email !== "" && formData.password !== ""){
+      if (formData.email === email && formData.password === password){
+        dispatch(loginUser(formData));
+        setFormData((formData.email = ""));
+        setFormData((formData.password = ""));
+        navigate("/home");
+      } else {
+        alert("Invalid email or password");
+      }
+    } else {
+      alert("please fill all the fields");
     }
   };
 
@@ -76,3 +79,4 @@ const Login = () => {
 };
 
 export default Login;
+
