@@ -19,8 +19,13 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(registerUser(formData));
-    navigate("/")
+    if(formData.name!=="" && formData.email!=="" && formData.password!==""){
+      dispatch(registerUser(formData));
+      navigate("/")
+    }
+    else{
+    alert("please fill all the fields")
+    }
   };
 
   return (
@@ -62,6 +67,3 @@ const Register = () => {
 };
 
 export default Register;
-
-
-
